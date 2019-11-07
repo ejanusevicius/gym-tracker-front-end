@@ -1,0 +1,34 @@
+.mainFooter {
+    width: 100%;
+    height: 35px;
+    background-color: #292929;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.mainFooter p {
+    color: white;
+    font-size: 0.65rem;
+}
+
+
+@media (max-width: 576px) {
+    .mainFooter p {
+        font-size: 0.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 992px) {
+    
+}
+
+@media (max-width: 1200px) {
+
+}

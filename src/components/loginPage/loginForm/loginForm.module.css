@@ -1,0 +1,110 @@
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    width: 400px;
+    background-color: white;
+}
+
+.loginForm i {
+    color: #57d6ff;
+    font-size: 5.5rem;
+}
+
+.loginForm input[type=text],
+.loginForm input[type=password] {
+    width: 70%;
+    font-size: 1.4rem;
+    font-family: inherit;
+    margin: 1.5rem 0;
+    text-align: center;
+    border: none;
+    border-radius: 6px;
+    background-color: rgb(245, 245, 245);
+    padding: 0.5rem 0.9rem;
+    border: 1px solid white;
+    transition: border 0.2s;
+}
+
+
+.loginForm input[type=text]:focus,
+.loginForm input[type=password]:focus {
+    outline: none;
+    border: 1px solid #57d6ff;
+}
+
+.loginForm input[type=submit] {
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: white;
+
+    margin-top: 0.8rem;
+    margin-bottom: 0.7rem;
+    padding: 0.5rem 0.9rem;
+
+    cursor: pointer;
+
+    background-color: #57d6ff;
+    border: none;
+    border-radius: 9px;
+}
+
+.loginForm p {
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.loginForm a {
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #57d6ff;
+}
+
+.loginButton {
+    font-size: 1.6rem !important;
+    font-family: inherit;
+    color: white !important;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.9rem;
+    background-color: #bc57ff;
+    border-radius: 9px;
+    text-decoration: none;
+}
+
+@media (max-width: 420px) {
+
+    .loginForm {
+        width: 250px;
+    }
+
+    .loginForm input[type=text],
+    .loginForm input[type=password] {
+        width: 60%;
+        font-size: 1rem;
+        margin: 1rem 0;
+        padding: 0.3rem 0.7rem;
+    }
+
+    .loginForm input[type=submit] {
+        font-size: 1.2rem;
+        margin-top: 0.7rem;
+        margin-bottom: 0.5rem;
+        padding: 0.3rem 0.6rem;
+    }
+
+    .loginForm p {
+        font-size: 0.6rem;
+    }
+
+    .loginButton {
+        font-size: 1.2rem !important;
+        margin: 0.3rem 0;
+        padding: 0.3rem 0.6rem;
+    }
+
+}
+
+

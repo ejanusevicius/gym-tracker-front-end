@@ -1,0 +1,4 @@
+.mainApp {
+    display: flex;
+    flex-direction: row;
+}
