@@ -1,4 +1,4 @@
-.homeHeader {
+.homeheader {
     width: 100%;
     height: 200px;
     background: url(../../../assets/home_header.jpg);
@@ -12,19 +12,8 @@
     align-items: center;
 }
 
-.homeHeader h1 {
+.homeheader__title {
     color: white;
     font-weight: 300;
     font-size: 3rem;
 }
-
-@media (max-width: 576px) {
-    .homeHeader {
-        height: 100px;
-    }
-
-    .homeHeader h1 {
-        font-size: 1.7rem;
-    }
-}
-

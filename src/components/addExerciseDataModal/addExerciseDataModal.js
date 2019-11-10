@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 
 //styling
-import classes from './addExerciseDataModal.module.css';
+import './addExerciseDataModal.css';
 import './redOutline.css';
 
 //functions
@@ -46,41 +46,45 @@ function AddExerciseModal(props) {
 
     return(
         
-        <div className={classes.Modal}>
+        <div className="modal">
 
-            <header className={classes.Modal__Header}>
+            <header className="modal__header">
 
-                <h4>Add data</h4>
+                <h4 className="modal__headline">Add data</h4>
 
             </header>
 
-            <section className={classes.Modal__Body}>
+            <section className="modal__body">
 
-                <form 
+                <form
+                className="exerciseform"
                 onSubmit={ event => props.addExerciseData(event, exerciseName, exerciseDate, exerciseWeight)}>
 
                     <label>Current exercise</label>
 
                     <input type="text" 
-                    className="js--name--box"
+                    className="exerciseform__name js--name--box"
                     onChange={ event => getName(event.target.value) }
                     value={formatString(props.exerciseName)}></input>
 
    
                     <label>Date</label>
                     <input type="date"
-                    className="js--date--box" 
+                    className="exerciseform__date js--date--box" 
                     onChange={ event => getDate(event.target.value) }
                     ></input>
 
                     <label>Weight used (Kg)</label>
 
                     <input type="text"
-                    className="js--weight--box"
+                    className="exerciseform__weight js--weight--box"
                     onChange={ event => getWeight(event) } 
                     value={exerciseWeight}></input>
 
-                    <input type="submit" value="Submit"></input>
+                    <input
+                    type="submit"
+                    value="Submit"
+                    className="exerciseform__submit"></input>
 
                 </form>
                

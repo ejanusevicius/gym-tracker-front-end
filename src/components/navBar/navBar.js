@@ -3,13 +3,13 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 //styling
-import classes from './navBar.module.css';
+import './navBar.css';
 
 
 
 function navBar() {
     return(
-        <nav className={classes.navBar}>
+        <nav className="navbar">
 
             <ul>
 

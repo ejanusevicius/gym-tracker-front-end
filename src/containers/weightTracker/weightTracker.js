@@ -2,7 +2,7 @@
 import React from 'react';
 
 //styling
-import classes from './weightTracker.module.css';
+import './weightTracker.css';
 
 //components
 import Header from '../../components/weightTracker/header/header';
@@ -15,14 +15,14 @@ import ExerciseData from '../../components/weightTracker/exerciseData/exerciseDa
 function weightTracker() {
 
     return (
-        <div className={classes.weightTrackerWindow}>
+        <div className="weighttracker">
 
             <Header />
 
-            <div className={classes.dashboard}>
+            <div className="weighttracker__dashboard">
 
                 <SearchBar />
-                <div className={classes.displayBox}>
+                <div className="weighttracker__displaybox">
                     <ExerciseData />
                     <Plot />
                 </div>

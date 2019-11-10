@@ -1,4 +1,4 @@
-.weightHeader {
+.weightheader {
     width: 100%;
     height: 200px;
     background: url(../../../assets/gymtracker_header.jpg);
@@ -12,22 +12,11 @@
     align-items: center;
 }
 
-.weightHeader h1 {
+.weightheader__title {
     color: white;
     font-weight: 300;
     font-size: 3rem;
 }
 
-@media (max-width: 768px) {
-    .weightHeader {
-        height: 70px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .weightHeader h1 {
-        font-size: 1rem;
-    }
-}
 
 

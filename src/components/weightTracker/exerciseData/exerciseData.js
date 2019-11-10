@@ -3,7 +3,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 //styling
-import classes from './exerciseData.module.css';
+import './exerciseData.css';
 
 //functions
 import formatString from '../../../functions/formatString';
@@ -16,10 +16,10 @@ function ExerciseData(props) {
 
     let tableEntries = null;
 
-    let prevButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Prev</button>;
-    let nextButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Next</button>;
+    let prevButton = <button className={`exercisedata__pagebutton exercisedata__pagebutton--disabled`}>Prev</button>;
+    let nextButton = <button className={`exercisedata__pagebutton exercisedata__pagebutton--disabled`}>Next</button>;
 
-    let addDataButton = <a href="#" className={classes.disabled}>Add data</a>;
+    let addDataButton = <a href="#" className="exercisedata__databutton--disabled">Add data</a>;
 
     if (props.activeExercise !== null) {
         addDataButton = <a href="#" style={{textDecoration: "none"}} onClick={props.turnOnAddDataModal}>Add data</a>;
@@ -79,25 +79,24 @@ function ExerciseData(props) {
         //render different buttons based on cases
         if (props.pageNumber === 1 & newData.data.length > 5) {
             //go to next page only            
-            nextButton = <button className={classes.pageButton} onClick={props.goToNextPage}>Next</button>;
+            nextButton = <button className="exercisedata__pagebutton" onClick={props.goToNextPage}>Next</button>;
 
         } else if (props.pageNumber > 1 && props.pageNumber < pageNum) {
             //show both buttons
-            prevButton = <button className={classes.pageButton} onClick={props.goToPreviousPage}>Prev</button>;
-            nextButton = <button className={classes.pageButton} onClick={props.goToNextPage}>Next</button>;
+            prevButton = <button className="exercisedata__pagebutton" onClick={props.goToPreviousPage}>Prev</button>;
+            nextButton = <button className="exercisedata__pagebutton" onClick={props.goToNextPage}>Next</button>;
 
         } else if (props.pageNumber === pageNum && newData.data.length < 5) {
             //disable both buttons
-            prevButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Prev</button>;
-            nextButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Next</button>;
+
 
         } else if ((props.pageNumber === pageNum && newData.data.length > 5) || (props.pageNumber > 1 && newData.data.slice(start, end).length === 0)) {
             //show only prev page only
-            prevButton = <button className={classes.pageButton} onClick={props.goToPreviousPage}>Prev</button>;
+            prevButton = <button className="exercisedata__pagebutton" onClick={props.goToPreviousPage}>Prev</button>;
 
         } else if (props.pageNumber === pageNum && newData.data.slice(start, end).length < 5) {
             //show only prev page only
-            prevButton = <button className={classes.pageButton} onClick={props.goToPreviousPage}>Prev</button>;
+            prevButton = <button className="exercisedata__pagebutton" onClick={props.goToPreviousPage}>Prev</button>;
 
         } else {
             //do nothing (both buttons are disabled)
@@ -111,7 +110,7 @@ function ExerciseData(props) {
                     <th>{`${el.weight} Kg`}</th>
                     <th><button 
                     id={el.id} name={props.activeExercise}
-                    className={classes.removeButton} 
+                    className="exercisedata__removebutton" 
                     onClick={ props.deleteExerciseData }>&#215;</button></th>
                 </tr>
             );
@@ -126,30 +125,28 @@ function ExerciseData(props) {
     }
 
     return(
-        <div className={classes.exerciseDataWindow}>
+        <div className="exercisedata">
 
 
-            <h3 className={classes.tableTitle}>{exerciseName}</h3>
+            <h3 className="exercisedata__title">{exerciseName}</h3>
 
-            <div className={classes.dataWrapper}>
-
-                <table className={classes.dataTable}>
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Weight</th>
-                            <th><span>&nbsp;</span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {tableEntries}
-                    </tbody>
-                </table>
-
-            </div>
+            <table className="exercisedata__table">
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Weight</th>
+                        <th><span>&nbsp;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {tableEntries}
+                </tbody>
+            </table>
 
 
-            <div className={classes.underTableBox}>
+
+
+            <div className="exercisedata__buttonbox">
 
                     {prevButton}
                     {addDataButton}

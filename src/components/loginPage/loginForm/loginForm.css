@@ -1,4 +1,4 @@
-.loginForm {
+.loginform {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -8,13 +8,13 @@
     background-color: white;
 }
 
-.loginForm i {
+.loginform__applogo {
     color: #57d6ff;
     font-size: 5.5rem;
 }
 
-.loginForm input[type=text],
-.loginForm input[type=password] {
+.loginform__name,
+.loginform__password {
     width: 70%;
     font-size: 1.4rem;
     font-family: inherit;
@@ -29,13 +29,13 @@
 }
 
 
-.loginForm input[type=text]:focus,
-.loginForm input[type=password]:focus {
+.loginforom__name:focus,
+.loginform__password:focus {
     outline: none;
     border: 1px solid #57d6ff;
 }
 
-.loginForm input[type=submit] {
+.loginform__submit {
     font-size: 1.6rem;
     font-family: inherit;
     color: white;
@@ -51,19 +51,19 @@
     border-radius: 9px;
 }
 
-.loginForm p {
+.loginform__disclaimer {
     text-align: center;
     font-size: 0.75rem;
 }
 
-.loginForm a {
+.loginform__anchor {
     margin-top: 0.25rem;
     font-size: 0.8rem;
     text-decoration: none;
     color: #57d6ff;
 }
 
-.loginButton {
+.loginform__demobutton {
     font-size: 1.6rem !important;
     font-family: inherit;
     color: white !important;
@@ -73,38 +73,4 @@
     border-radius: 9px;
     text-decoration: none;
 }
-
-@media (max-width: 420px) {
-
-    .loginForm {
-        width: 250px;
-    }
-
-    .loginForm input[type=text],
-    .loginForm input[type=password] {
-        width: 60%;
-        font-size: 1rem;
-        margin: 1rem 0;
-        padding: 0.3rem 0.7rem;
-    }
-
-    .loginForm input[type=submit] {
-        font-size: 1.2rem;
-        margin-top: 0.7rem;
-        margin-bottom: 0.5rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .loginForm p {
-        font-size: 0.6rem;
-    }
-
-    .loginButton {
-        font-size: 1.2rem !important;
-        margin: 0.3rem 0;
-        padding: 0.3rem 0.6rem;
-    }
-
-}
-
 

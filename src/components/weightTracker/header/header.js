@@ -2,14 +2,14 @@
 import React from 'react';
 
 //styling
-import classes from './header.module.css';
+import './header.css';
 
 
 
 function header() {
     return(
-        <header className={classes.weightHeader}>
-            <h1>Gym weight tracker</h1>
+        <header className="weightheader">
+            <h1 className="weightheader__title">Gym weight tracker</h1>
         </header>
     );
 }

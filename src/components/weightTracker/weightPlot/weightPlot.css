@@ -1,4 +1,4 @@
-.weightPlot {
+.weightplot {
     border: 1px solid #57d6ff;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.08);
     z-index: -1;
@@ -6,9 +6,3 @@
     width: 70%;
 }
 
-@media (max-width: 420px) {
-    .weightPlot {
-        height: 85%;
-        width: 85%;
-    }
-}

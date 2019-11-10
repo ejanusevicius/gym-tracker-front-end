@@ -3,16 +3,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //styling
-import classes from './card.module.css';
+import './card.css';
 
 
 
 function Card(props) {
     return (
-        <div className={classes.Card}>
+        <div className="card">
 
-            <p className={classes.CardNumber}>{props.number}</p>
-            <p className={classes.CardTitle}>{props.title}</p>
+            <p className="card__number">{props.number}</p>
+            <p className="card__title">{props.title}</p>
             <Link to={props.linkPath}>{props.linkText}</Link>
             
         </div>

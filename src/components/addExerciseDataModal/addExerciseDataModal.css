@@ -1,6 +1,6 @@
 
 
-.Modal {
+.modal {
     width: 400px;
     height: 470px;
     background-color: rgb(255, 255, 255);
@@ -11,9 +11,10 @@
     left: 50%;
     margin-top: -235px;
     margin-left: -200px;
+    border-radius: 20px;
 }
 
-.Modal__Header {
+.modal__header {
     width: 100%;
     height: 12.5%;
     background-color: #57d6ff;
@@ -21,109 +22,64 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
-.Modal__Header h4 {
+.modal__headline {
     margin: 0;
     padding: 0;
     color: white;
     font-size: 1.25rem;
 }
 
-.Modal__Body {
+.modal__body {
+    height: 87.5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.exerciseform {
     display: flex;
     flex-direction: column;
 
     justify-content: center;
     align-items: center;
-}
-
-.Modal__Body form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.Modal__Body input {
+    
     font-weight: 400;
 }
 
-.Modal__Body form input[type=text] {
-    width: 80%;
 
+
+.exerciseform__name,
+.exerciseform__date,
+.exerciseform__weight {
+    width: 80%;
     font-size: 1.4rem;
     font-family: inherit;
     font-weight: 400;
-
     margin: 0.75rem 0;
-
     text-align: center;
-
     border: none;
     border-radius: 6px;
-    
     background-color: rgb(245, 245, 245);
     padding: 0.5rem 0.9rem;
-
     border: 1px solid white;
-
     transition: border 0.2s;
 }
 
-.Modal__Body input[type=submit] {
+.exerciseform__submit {
     font-size: 1.6rem;
     font-family: inherit;
     color: white;
-
     margin: 1.5rem;
     padding: 0.5rem 0.9rem;
-
     cursor: pointer;
-
     background-color: #57d6ff;
     border: none;
     border-radius: 9px;
 }
-
-.Modal__Body form input[type=date] {
-    width: 80%;
-
-    font-size: 1.4rem;
-    font-family: inherit;
-
-    margin: 0.75rem 0;
-
-    text-align: center;
-
-    border: none;
-    border-radius: 6px;
-    
-    background-color: rgb(245, 245, 245);
-    padding: 0.5rem 0.9rem;
-
-    border: 1px solid white;
-
-    transition: border 0.2s;
-}
-
-.Results__Box p {
-    font-size: 1rem;
-    text-align: center;
-}
-
-.Results__Box p:last-of-type {
-    margin-bottom: 1rem;
-}
-
-.Modal__Body form label:first-child {
-    margin-top: 2rem;
-}
-
-.Results__Box  {
-    width: 100%;
-    height: 125px;
-    
-    margin-bottom: 0.7rem;
-}
-

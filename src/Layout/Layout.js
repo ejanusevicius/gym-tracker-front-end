@@ -1,15 +1,13 @@
+//libs
 import React, { useState } from 'react';
-
 import { Route, Switch, Redirect } from 'react-router-dom';
-
-
-import '../components/userBar/userBar';
-
 import { connect } from 'react-redux';
 
+//styling
+import '../components/userBar/userBar';
 
+//containers
 import LoginPage from '../containers/loginPage/loginPage';
-
 import AppWindow from '../containers/appWindow/appWindow';
 
 function Layout(props) {

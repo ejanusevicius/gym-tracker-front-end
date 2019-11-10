@@ -2,22 +2,28 @@
 import React from 'react';
 
 //styling
-import classes from './userBar.module.css';
+import './userBar.css';
 
 
 
 function userBar(props) {
     
     return(
-        <div className={classes.userBar}>
+        <div className="userbar">
 
-            <i className={`ion-ios-pulse-strong ${classes.appIcon}`}></i>
+            <i className="userbar__icon ion-ios-pulse-strong"></i>
 
-            <div className={classes.userBox}>
+            <div className="userbox">
 
-                <img src="/assets/photo.jpg" alt="user"></img>
+                <img
+                src="/assets/photo.jpg"
+                alt="user"
+                className="userbox__image"></img>
 
-                <a onClick={props.changeAuth} href="#">Log out</a>
+                <a
+                onClick={props.changeAuth}
+                href="#"
+                className="userbox__anchor">Log out</a>
 
             </div>
             

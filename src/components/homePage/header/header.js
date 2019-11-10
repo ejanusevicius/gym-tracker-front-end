@@ -2,14 +2,14 @@
 import React from 'react';
 
 //styling
-import classes from './header.module.css';
+import './header.css';
 
 
 
 function header() {
     return(
-        <header className={classes.homeHeader}>
-            <h1>Dashboard</h1>
+        <header className="homeheader">
+            <h1 className="homeheader__title">Dashboard</h1>
         </header>
     );
 }

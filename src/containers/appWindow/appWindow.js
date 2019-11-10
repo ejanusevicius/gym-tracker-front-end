@@ -4,7 +4,7 @@ import { Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 //styling
-import classes from './appWindow.module.css';
+import './appWindow.css';
 
 
 //containers
@@ -29,7 +29,7 @@ function appWindow(props) {
 
             <UserBar changeAuth={props.changeAuth} />
             
-                <div className={classes.mainApp}>
+                <div className="application">
                     <NavBar />
 
                     <Switch>

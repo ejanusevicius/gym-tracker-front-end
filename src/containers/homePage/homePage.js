@@ -2,7 +2,7 @@
 import React from 'react';
 
 //styling
-import classes from './homePage.module.css';
+import './homePage.css';
 
 //components
 import Header from '../../components/homePage/header/header';
@@ -13,11 +13,11 @@ import Card from '../../components/homePage/card/card';
 function homePage() {
 
     return (
-        <div className={classes.homeWindow}>
+        <div className="homewindow">
 
             <Header />
 
-            <div className={classes.dashboard}>
+            <div className="homewindow__dashboard">
 
                 <Card 
                 title={`Days ago was the last time you we're at the gym`}

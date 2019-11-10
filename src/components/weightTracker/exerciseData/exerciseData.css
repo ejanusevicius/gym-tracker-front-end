@@ -1,4 +1,4 @@
-.exerciseDataWindow {
+.exercisedata {
     width: 250px;
 
     display: flex;
@@ -12,19 +12,13 @@
 
 }
 
-.tableTitle {
+.exercisedata__title {
     color: #757575;
     text-align: center;
     font-size: 0.9rem;
 }
 
-.dataWrapper {
-    display: flex;
-    flex-direction: column;
-    height: 310px;
-}
-
-.dataTable {
+.exercisedata__table {
     border-collapse: collapse;
     font-size: 0.9em;
     border-radius: 5px 5px 0 0;
@@ -33,48 +27,45 @@
 }
 
 
-.dataTable thead tr {
+.exercisedata__table thead tr {
     background-color: #57d6ff;
     color: #ffffff;
     text-align: center;
 }
   
-.dataTable th,
-.dataTable td {
+.exercisedata__table th,
+.exercisedata__table td {
     padding: 12px 15px;
 }
   
-.dataTable tbody tr {
+.exercisedata__table tbody tr {
     border-bottom: 1px solid #dddddd;
     color: #757575;
 }
   
-.dataTable tbody tr:nth-of-type(even) {
+.exercisedata__table tbody tr:nth-of-type(even) {
     background-color: #f3f3f3;
 }
   
-.dataTable tbody tr:last-of-type {
+.exercisedata__table tbody tr:last-of-type {
     border-bottom: 2px solid #57d6ff;
 }
   
-.dataTable tbody tr.active-row {
+.exercisedata__table tbody tr.active-row {
     color: #57d6ff;
 }
   
 
-.underTableBox {
+.exercisedata__buttonbox {
     display: flex;
-
     justify-self: center;
     align-self: center;
-
     justify-content: center;
     align-items: center;
-
     margin-top: 20px;
 }
 
-.underTableBox a {
+.exercisedata__buttonbox a {
     z-index: 0;
     margin-top: 1rem;
     font-size: 0.8rem;
@@ -89,7 +80,7 @@
     
 }
 
-.underTableBox p {
+.exercisedata__buttonbox p {
     background-color: #57d6ff;
     color: white;
     padding: 0.5rem 0.5rem;
@@ -100,17 +91,17 @@
     cursor: pointer;
 }
 
-.underTableBox p:hover {
+.exercisedata__buttonbox p:hover {
     transform: scale(1.05);
 }
 
-.underTableBox a:hover {
+.exercisedata__buttonbox a:hover {
     transform: scale(1.05);
     margin-left: 5px;
     margin-right: 5px;
 }
 
-.removeButton {
+.exercisedata__removebutton {
     color: white;
     background-color: #57d6ff;
     border: none;
@@ -120,16 +111,16 @@
     transition: transform 0.15s;
 }
 
-.removeButton:hover {
+.exercisedata__removebutton:hover {
     transform: scale(1.05);
 }
 
-.removeButton:focus {
+.exercisedata__removebutton:focus {
     outline: none;
     background-color: #2ac8fd;
 }
 
-.pageButton {
+.exercisedata__pagebutton {
     color: white;
     background-color: #57d6ff;
     border: none;
@@ -140,7 +131,8 @@
     z-index: 0;
 }
 
-.disabled {
+.exercisedata__pagebutton--disabled,
+.exercisedata__databutton--disabled {
     opacity: 0.4;
 }
 
@@ -184,53 +176,4 @@
         height: 100%;
     }
 
-}
-
-@media (max-width: 1274px) {
-
-    .dataTable th,
-    .dataTable td {
-    padding: 6px 0px;
-    font-size: 0.7rem;
-    }
-
-    .exerciseDataWindow {
-        width: 150px;
-        margin-left: 0.7rem;
-        margin-right: 0.7rem;
-    }
-
-    .underTableBox a {
-        font-size: 0.6rem;
-        padding: 0.35rem 0.35rem;
-    }
-
-    .pageButton {
-        font-size: 0.55rem;
-        padding: 4px 6px;
-        margin: 3px 6px;
-
-    }
-}
-
-@media (max-width: 600px) {
-
-    .exerciseDataWindow {
-        display: none;
-    }
-}
-
-@media (max-width: 420px) {
-    .dataTable th,
-    .dataTable td {
-        padding: 0px 3px;
-        font-size: 0.5rem;
-    }
-}
-
-@media (max-width: 360px) {
-
-    .exerciseDataWindow {
-        display: none;
-    }
 }

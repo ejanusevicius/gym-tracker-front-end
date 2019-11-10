@@ -3,13 +3,15 @@ import React from 'react';
 import { connect } from 'react-redux'; 
 
 //styling
-import classes from './backdrop.module.css';
+import './backdrop.css';
 
 
 
 function backdrop(props) {
     return(
-        <div onClick={props.turnOffAddDataModal} className={classes.backdrop}></div>
+        <div 
+        onClick={props.turnOffAddDataModal} 
+        className="backdrop"></div>
     );
 }
 

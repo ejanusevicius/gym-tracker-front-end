@@ -1,47 +1,25 @@
-.weightTrackerWindow {
+.weighttracker {
     display: flex;
     flex-direction: column;
-
     width: 100%;
-    height: 100%;
-    
+    height: 100%; 
 }
 
-.dashboard {
+.weighttracker__dashboard {
     display: flex;
     flex-direction: row;
-
     height: 100%;
-
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
 }
 
-.displayBox {
+.weighttracker__displaybox {
     display: flex;
     flex-direction: row;
-
     justify-content: space-around;
     align-items: center;
-    
     height: 80%;
     width: 70%;
-}
-
-@media (max-width: 768px) {
-    .dashboard {
-        flex-direction: column;
-    }
-
-    .displayBox {
-        width: 95%;
-    }
-}
-
-@media (max-width: 768px) {
-    .weightTrackerWindow {
-        width: 100%;
-    }
 }
 

@@ -4,7 +4,7 @@ import Plot from 'react-plotly.js';
 import { connect } from 'react-redux';
 
 //styling
-import classes from './weightPlot.module.css';
+import './weightPlot.css';
 
 //functions
 import formatString from '../../../functions/formatString';
@@ -68,7 +68,7 @@ function WeightPlot(props) {
 
     return (
         <Plot
-        className={classes.weightPlot}
+        className="weightplot"
         data={[
           {
             x: extractedDates,

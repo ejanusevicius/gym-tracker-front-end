@@ -1,0 +1,27 @@
+.navbar {
+    background-color: #5b5b5b;
+    width: 20%;
+    height: 100%;
+    margin: 0 0;
+    overflow: hidden;
+}
+
+.navbar ul {
+    padding-left: 0;
+    margin-top: 250px;
+}
+
+.navbar ul li {
+    text-align: center;
+    list-style: none;
+    margin: 0.6rem 0;
+    width: 100%;
+}
+
+.navbar ul li a {
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-size: 1.3rem;
+    padding: 0.4rem 0;
+}

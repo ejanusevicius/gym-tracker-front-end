@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 //styling
-import classes from './searchBar.module.css';
+import './searchBar.css';
 
 //functions
 import generateId from '../../../functions/randomId';
@@ -72,8 +72,8 @@ function SearchBar(props) {
     let renderedList = null;
 
     //buttons
-    let prevButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Prev</button>;
-    let nextButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Next</button>;
+    let prevButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Prev</button>;
+    let nextButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Next</button>;
 
 
     //pagination
@@ -100,23 +100,23 @@ function SearchBar(props) {
 
         if (props.pageNumber === 1 & filteredExercises.length > 5) {
             //go to next page only            
-            prevButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Prev</button>;
-            nextButton = <button className={classes.pageButton} onClick={props.searchGoToNextPage}>Next</button>;
+            prevButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Prev</button>;
+            nextButton = <button className="searchbar__pagebutton" onClick={props.searchGoToNextPage}>Next</button>;
 
         } else if (props.pageNumber > 1 && props.pageNumber < pageNum) {
             //show both buttons
-            prevButton = <button className={classes.pageButton} onClick={props.searchGoToPreviousPage}>Prev</button>;
-            nextButton = <button className={classes.pageButton} onClick={props.searchGoToNextPage}>Next</button>;
+            prevButton = <button className="searchbar__pagebutton" onClick={props.searchGoToPreviousPage}>Prev</button>;
+            nextButton = <button className="searchbar__pagebutton" onClick={props.searchGoToNextPage}>Next</button>;
 
         } else if (props.pageNumber === pageNum && filteredExercises.length < 5) {
             //disable both buttons
-            prevButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Prev</button>;
-            nextButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Next</button>;
+            prevButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Prev</button>;
+            nextButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Next</button>;
 
         } else if (props.pageNumber === pageNum && filteredExercises.length > 5) {
             //show only prev page only
-            prevButton = <button className={classes.pageButton} onClick={props.searchGoToPreviousPage}>Prev</button>;
-            nextButton = <button className={`${classes.pageButton} ${classes.disabled}`}>Next</button>;
+            prevButton = <button className="searchbar__pagebutton" onClick={props.searchGoToPreviousPage}>Prev</button>;
+            nextButton = <button className={`searchbar__pagebutton searchbar__pagebutton--disabled`}>Next</button>;
 
         }
 
@@ -132,42 +132,33 @@ function SearchBar(props) {
     };
 
     return(
-        <div className={classes.searchBarWindow}>
+        <div className="searchbar">
 
-            <h2 className={classes.searchBarTitle}>Search for an exercise</h2>
+            <h2 className="searchbar__title">Search for an exercise</h2>
 
-            <div className={classes.searchBarWrapper}>
-                
-                
-                <div className={classes.searchBarBox}>
+                <div className="searchbar__box">
 
                     <input
                     value={searchInput}
-                    className="js--searchBox"
+                    className="searchbar__input js--searchBox"
                     type="text"
                     placeholder="Enter exercise name"
                     onChange={filterSearch}></input>
 
                     <button
                     onClick={createNewExercise}
-                    className={classes.addExerciseButton}>+</button>
+                    className="searchbar__addbutton">+</button>
             
                 </div>
 
-                <div className={classes.searchResultBox}>
+                <div className="searchbar__resultbox">
                     {renderedList}
                 </div>
 
-                <div className={classes.buttonBox}>
-
+                <div className="searchbar__buttonbox">
                     {prevButton}
                     {nextButton}
-                
                 </div>
-
-            </div>
-
-
 
         </div>
     );
