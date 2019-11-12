@@ -8,7 +8,8 @@
 
 .navbar ul {
     padding-left: 0;
-    margin-top: 250px;
+    margin-top: 30vh;
+    width: 100%;
 }
 
 .navbar ul li {

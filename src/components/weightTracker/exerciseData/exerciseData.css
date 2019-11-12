@@ -15,7 +15,8 @@
 .exercisedata__title {
     color: #757575;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-top: 0;
 }
 
 .exercisedata__table {
@@ -105,7 +106,8 @@
     color: white;
     background-color: #57d6ff;
     border: none;
-    padding: 0.4rem 0.6rem;
+    font-size: 1rem;
+    padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: inherit;
     transition: transform 0.15s;

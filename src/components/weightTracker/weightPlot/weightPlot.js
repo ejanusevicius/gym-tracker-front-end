@@ -82,7 +82,7 @@ function WeightPlot(props) {
               l: 50,
               r: 50,
               b: 70,
-              t: 45,
+              t: 70
             }
           }
         }

@@ -19,7 +19,7 @@ function Layout(props) {
         setisAuth( prevState => isAuth = !prevState );
     };
 
-    let redirector = <Redirect to="/" />
+    let redirector = <Redirect to="/login/" />
 
     if (isAuth) {
         redirector = <Redirect to="/app/dashboard" />;
@@ -32,13 +32,15 @@ function Layout(props) {
 
             <Switch>
 
-            <Route path="/" exact
+            <Route path="/login/" exact
             render={() => <LoginPage changeAuth={changeAuth} />} 
             />;
 
             <Route path="/app/"
             render={() => <AppWindow changeAuth={changeAuth} authState={isAuth} urlPath={"/app"} />} 
             />
+
+            <Redirect from="/" to="/login/" />
                 
             </Switch>
 
