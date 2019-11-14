@@ -1,5 +1,17 @@
 .application {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
     height: calc(100vh - 85px);
+}
+
+
+@media (max-width: 768px) {
+    .application {
+        height: calc(100vh - 35px);
+    }
 }

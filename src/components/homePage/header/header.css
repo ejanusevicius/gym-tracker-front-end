@@ -7,13 +7,43 @@
     background-repeat: no-repeat;
     background-position-y: center;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 .homeheader__title {
     color: white;
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 2.25rem;
+}
+
+@media (max-width: 1080px) {
+
+    .homeheader {
+        height: 125px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .homeheader__title {
+        margin-right: auto;
+        margin-left: -45px;
+    }
+}
+
+
+@media (max-width: 420px) {
+    .homeheader__title {
+        font-size: 1.5rem;
+    }
 }

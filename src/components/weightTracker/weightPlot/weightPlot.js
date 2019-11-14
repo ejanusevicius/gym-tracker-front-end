@@ -68,7 +68,7 @@ function WeightPlot(props) {
 
     return (
         <Plot
-        className="weightplot"
+        className={`weightplot ${props.animation}`}
         data={[
           {
             x: extractedDates,

@@ -9,6 +9,8 @@ import Header from '../../components/weightTracker/header/header';
 import Plot from '../../components/weightTracker/weightPlot/weightPlot';
 import SearchBar from '../../components/weightTracker/searchBar/searchBar';
 import ExerciseData from '../../components/weightTracker/exerciseData/exerciseData';
+import ResponsiveContainer from '../../components/weightTracker/responsiveContainer/responsiveContainer';
+
 
 
 
@@ -21,8 +23,10 @@ function weightTracker() {
 
             <div className="weighttracker__dashboard">
 
-                <SearchBar />
+                <ResponsiveContainer />
+
                 <div className="weighttracker__displaybox">
+                    <SearchBar />
                     <ExerciseData />
                     <Plot />
                 </div>

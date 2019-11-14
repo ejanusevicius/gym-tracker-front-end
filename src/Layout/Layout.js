@@ -1,5 +1,5 @@
 //libs
-import React, { useState } from 'react';
+import React from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
@@ -12,16 +12,10 @@ import AppWindow from '../containers/appWindow/appWindow';
 
 function Layout(props) {
 
-    const [isAuth, setisAuth] = useState(false);
-
-    const changeAuth = (isAuth) => {
-        //update the auth state
-        setisAuth( prevState => isAuth = !prevState );
-    };
 
     let redirector = <Redirect to="/login/" />
 
-    if (isAuth) {
+    if (props.isAuth) {
         redirector = <Redirect to="/app/dashboard" />;
     }
 
@@ -33,11 +27,11 @@ function Layout(props) {
             <Switch>
 
             <Route path="/login/" exact
-            render={() => <LoginPage changeAuth={changeAuth} />} 
-            />;
+            render={() => <LoginPage changeAuth={props.changeAuthState} />} 
+            />
 
             <Route path="/app/"
-            render={() => <AppWindow changeAuth={changeAuth} authState={isAuth} urlPath={"/app"} />} 
+            render={() => <AppWindow changeAuth={props.changeAuthState} authState={props.isAuth} urlPath={"/app"} />} 
             />
 
             <Redirect from="/" to="/login/" />
@@ -50,8 +44,15 @@ function Layout(props) {
 
 const mapStateToProps = state => {
     return {
-        isAddDataModalOn : state.isAddDataModalOn
+        isAddDataModalOn : state.isAddDataModalOn,
+        isAuth : state.isAuth
     }
 };
 
-export default connect(mapStateToProps, null)(Layout);
+const mapDispatchToProps = dispatch => {
+    return {
+        changeAuthState: () => dispatch({type:'TOGGLE_AUTH_STATUS'})
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Layout);

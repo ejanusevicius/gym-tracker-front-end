@@ -1,0 +1,65 @@
+.responsivecontainer {
+    width: 90%;
+    height: 90%;
+    display: none;
+}
+
+
+.responsivecontainer__buttonbox {
+    width: 60px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+    .responsivecontainer__button {
+        margin: 0 0;
+        font-size: 2.5rem;
+        color: #757575;
+    }
+
+        .responsivecontainer__button--active {
+            color: #57d6ff;
+        }
+
+.responsivecontainer__contentbox {
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+}
+
+@media (max-width: 768px) {
+    .responsivecontainer {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
+    }
+}
+
+@media (max-width: 420px) {
+    .responsivecontainer__button {
+        font-size: 2rem;
+    }
+}

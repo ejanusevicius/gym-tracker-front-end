@@ -1,12 +1,18 @@
 .exercisedata {
     width: 250px;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    align-self: flex-start;
-
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-right: 3rem;
     margin-left: 3rem;
 
@@ -24,7 +30,8 @@
     font-size: 0.9em;
     border-radius: 5px 5px 0 0;
     overflow: hidden;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
 
@@ -58,11 +65,18 @@
   
 
 .exercisedata__buttonbox {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     justify-self: center;
-    align-self: center;
-    justify-content: center;
-    align-items: center;
+    -ms-flex-item-align: center;
+        align-self: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     margin-top: 20px;
 }
 
@@ -71,14 +85,17 @@
     margin-top: 1rem;
     font-size: 0.8rem;
     justify-self: end;
-    align-self: center;
+    -ms-flex-item-align: center;
+        align-self: center;
     text-align: center;
     background-color: #57d6ff;
     color: white;
     padding: 0.5rem 0.5rem;
     border-radius: 5px;
+    -webkit-transition: margin-left 0.15s, margin-right 0.15s, -webkit-transform 0.15s;
+    transition: margin-left 0.15s, margin-right 0.15s, -webkit-transform 0.15s;
     transition: transform 0.15s, margin-left 0.15s, margin-right 0.15s;
-    
+    transition: transform 0.15s, margin-left 0.15s, margin-right 0.15s, -webkit-transform 0.15s;
 }
 
 .exercisedata__buttonbox p {
@@ -88,18 +105,21 @@
     border-radius: 5px;
     margin: auto 0.6rem;
     font-size: 0.7rem;
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: -webkit-transform 0.15s;
     transition: transform 0.15s;
+    transition: transform 0.15s, -webkit-transform 0.15s;
     cursor: pointer;
 }
 
 .exercisedata__buttonbox p:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .exercisedata__buttonbox a:hover {
-    transform: scale(1.05);
-    margin-left: 5px;
-    margin-right: 5px;
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .exercisedata__removebutton {
@@ -110,11 +130,15 @@
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
     font-family: inherit;
+    -webkit-transition: -webkit-transform 0.15s;
+    transition: -webkit-transform 0.15s;
     transition: transform 0.15s;
+    transition: transform 0.15s, -webkit-transform 0.15s;
 }
 
 .exercisedata__removebutton:hover {
-    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
 }
 
 .exercisedata__removebutton:focus {
@@ -140,42 +164,124 @@
 
 @media (max-width: 1420px) {
 
-    .exerciseDataWindow {
-        margin-top: 25px;
-        width: 200px;
-        margin-right: 1rem;
-        margin-left: 1rem;
-    }
-
-    .tableTitle {
-        color: #757575;
-        text-align: center;
-        font-size: 0.8rem;
+    .exercisedata {
+        width: 225px;
+        margin-right: 1.5rem;
+        margin-left: 1.5rem;
     }
     
-    .dataTable th,
-    .dataTable td {
-    padding: 6px 9px;
-    font-size: 0.7rem;
+    .exercisedata__title {
+        font-size: 1.1rem;
+    }
+    
+    .exercisedata__table {
+        font-size: 0.75em;
+    }
+      
+    .exercisedata__table th,
+    .exercisedata__table td {
+        padding: 8px 10px;
     }
 
-    .pageButton {
-        border-radius: 5px;
-        padding: 6px 7px;
-        margin: 4px 7px;
-        font-size: 0.8rem;
-    }
-
-    .removeButton {
-        padding: 1px 4px;
-    }
-
-    .underTableBox a {
-        font-size: 0.8rem;   
-    }
-
-    .dataWrapper {
-        height: 100%;
+    .exercisedata__buttonbox a {
+        margin-top: 0.6rem;
+        font-size: 0.65rem;
+        padding: 0.35rem 0.35rem;
     }
 
 }
+
+@media (max-width: 1200px) {
+
+    .exercisedata {
+        margin-right: 1rem;
+        margin-left: 1rem;
+    }
+    
+    .exercisedata__title {
+        font-size: 0.9rem;
+    }
+    
+    .exercisedata__table {
+        font-size: 0.7em;
+    }
+      
+    .exercisedata__table th,
+    .exercisedata__table td {
+        padding: 8px 10px;
+    }
+
+    .exercisedata__removebutton {
+        font-size: 0.65rem;
+        padding: 0.15rem 0.3rem;
+
+    }
+
+    .exercisedata__pagebutton {
+        font-size: 0.55rem;
+    }
+
+}
+
+@media (max-width: 1080px) {
+
+    .exercisedata {
+        margin-right: 0.6rem;
+        margin-left: 0.6rem;
+    }
+    
+    .exercisedata__title {
+        font-size: 0.8rem;
+    }
+    
+    .exercisedata__table {
+        font-size: 0.7em;
+    }
+      
+    .exercisedata__table th,
+    .exercisedata__table td {
+        padding: 3px 3px;
+    }
+}
+
+@media (max-width: 768px) {
+    .exercisedata {
+        -ms-flex-item-align: auto;
+            align-self: auto;
+    }
+
+    .exercisedata__title {
+        font-size: 1.5rem;
+    }
+
+    .exercisedata__table {
+        font-size: 0.9em;
+    }
+          
+    .exercisedata__table th,
+    .exercisedata__table td {
+        padding: 12px 15px;
+    }
+
+    .exercisedata__removebutton {
+        font-size: 1rem;
+        padding: 0.2rem 0.4rem;
+    }
+
+}
+
+@media (max-width: 420px) {
+    .exercisedata__title {
+        font-size: 1.25rem;
+    }
+
+    .exercisedata__table {
+        font-size: 0.75rem;
+    }
+
+    .exercisedata__table th,
+    .exercisedata__table td {
+        padding: 8px 6px;
+    }
+}
+

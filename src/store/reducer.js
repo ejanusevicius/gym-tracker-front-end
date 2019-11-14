@@ -3,7 +3,10 @@ import generateId from '../functions/randomId';
 import exerciseList from '../api_dummies/apiDummy';
 
 const initialState = {
+    isAuth: false,
     isAddDataModalOn : false,
+    isResponsiveNavBarOn: false,
+    activeResponsiveWidget: 'exercisedata',
     searchPageNumber: 1,
     dataPageNumber: 1,
     activeExercise: 'squats',
@@ -19,6 +22,17 @@ const initialState = {
 };
 
 const RootReducer = (state = initialState, action) => {
+
+    if (action.type === 'TOGGLE_AUTH_STATUS') {
+        //make new state
+        const newState = {...state}
+        //disabling the navbar modal isAuth
+        newState.isResponsiveNavBarOn = false;
+        //changing the auth state
+        newState.isAuth = !state.isAuth;
+        //return new state
+        return newState;
+    }
 
     if (action.type === 'TURN_ON_DATA_MODAL') {
         //make new state
@@ -41,6 +55,30 @@ const RootReducer = (state = initialState, action) => {
         //return the updated stated
         return newState;
     }
+
+    if (action.type === 'TOGGLE_RESPONSIVE_NAVBAR') {
+        //make new state
+        const newState = {...state};
+
+        //toggle the state
+        newState.isResponsiveNavBarOn = !state.isResponsiveNavBarOn;
+
+        //return new state
+        return newState;
+    }
+
+    if (action.type === 'CHANGE_RESPONSIVE_WIDGET') {
+        //make new state
+        const newState = {...state};
+
+        //toggle the state
+        newState.activeResponsiveWidget = action.value;
+
+        //return new state
+        return newState;
+    }
+
+    
 
     if (action.type === 'ADD_DATA_ENTRY') {
         //create a data object
@@ -187,6 +225,9 @@ const RootReducer = (state = initialState, action) => {
 
         //set the activeExercise to the action.value
         newState.activeExercise = action.value;
+
+        //set responsive widget
+        newState.activeResponsiveWidget = 'weightplot';
 
         //return new state
         return newState;

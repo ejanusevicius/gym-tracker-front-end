@@ -1,0 +1,31 @@
+.burgerbutton {
+    width: 35px;
+    height: 35px;
+    background-color: rgb(255, 255, 255, 0.4);
+    border-radius: 50%;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-left: 10px;
+
+    display: none;
+}
+    .burgerbutton__icon {
+        color: #57d6ff;
+        font-size: 1.5rem;
+    }
+
+@media (max-width: 768px) {
+    .burgerbutton {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;
+    }
+}

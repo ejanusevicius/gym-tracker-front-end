@@ -1,8 +1,17 @@
 .loginform {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     border-radius: 15px;
     width: 400px;
     background-color: white;
@@ -25,6 +34,7 @@
     background-color: rgb(245, 245, 245);
     padding: 0.5rem 0.9rem;
     border: 1px solid white;
+    -webkit-transition: border 0.2s;
     transition: border 0.2s;
 }
 
@@ -74,3 +84,44 @@
     text-decoration: none;
 }
 
+
+@media (max-width: 576px) {
+    .loginform {
+        width: 240px;
+    }
+
+    .loginform__applogo {
+        font-size: 4rem;
+    }
+
+    .loginform__name,
+    .loginform__password {
+    width: 60%;
+    font-size: 1rem;
+    margin: 1.5rem 0;
+    }
+
+    .loginform__submit {
+        font-size: 1.2rem;
+        margin-top: 0.7rem;
+        margin-bottom: 0.6rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .loginform__disclaimer {
+        text-align: center;
+        font-size: 0.6rem;
+    }
+    
+    .loginform__anchor {
+        margin-top: 0.2rem;
+        font-size: 0.55rem;
+
+    }
+    
+    .loginform__demobutton {
+        font-size: 1.2rem !important;
+        color: white !important;
+    }
+
+}

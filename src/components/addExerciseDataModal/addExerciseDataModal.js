@@ -46,7 +46,7 @@ function AddExerciseModal(props) {
 
     return(
         
-        <div className="modal">
+        <div className="modal animated fadeIn faster">
 
             <header className="modal__header">
 

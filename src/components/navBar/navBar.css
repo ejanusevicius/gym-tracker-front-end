@@ -26,3 +26,10 @@
     font-size: 1.3rem;
     padding: 0.4rem 0;
 }
+
+
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+}

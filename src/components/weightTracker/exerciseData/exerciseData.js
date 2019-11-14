@@ -125,7 +125,7 @@ function ExerciseData(props) {
     }
 
     return(
-        <div className="exercisedata">
+        <div className={`exercisedata ${props.animation}`}>
 
 
             <h3 className="exercisedata__title">{exerciseName}</h3>

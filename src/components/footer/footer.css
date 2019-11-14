@@ -13,3 +13,10 @@
     color: white;
     font-size: 0.65rem;
 }
+
+
+@media (max-width: 420px) {
+    .footer__text {
+        font-size: 0.5rem;
+    }
+}

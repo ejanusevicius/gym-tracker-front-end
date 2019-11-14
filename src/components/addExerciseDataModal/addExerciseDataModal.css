@@ -19,9 +19,17 @@
     height: 17.5%;
     background-color: #57d6ff;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
+
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -36,19 +44,39 @@
 
 .modal__body {
     height: 87.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 
 }
 
 .exerciseform {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
 
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+
+        -ms-flex-pack: center;
+
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     
     font-weight: 400;
 }
@@ -69,6 +97,7 @@
     background-color: rgb(245, 245, 245);
     padding: 0.5rem 0.9rem;
     border: 1px solid white;
+    -webkit-transition: border 0.2s;
     transition: border 0.2s;
 }
 

@@ -18,13 +18,18 @@ import Footer from '../../components/footer/footer';
 import Backdrop from '../../components/backdrop/backdrop';
 import AddExerciseModal from '../../components/addExerciseDataModal/addExerciseDataModal';
 
+import ResponsiveNavBar from '../../components/responsiveNavBar/responsiveNavBar';
+
 
 
 function appWindow(props) {
 
     return (<React.Fragment>
 
-            {props.isAddDataModalOn && <Backdrop />}
+            {props.toggleResponsiveNavbar && <Backdrop animation="animated fadeIn faster" onClickFunc="responsiveNavbar" />}
+            {props.toggleResponsiveNavbar && <ResponsiveNavBar changeAuth={props.changeAuth} />}
+
+            {props.isAddDataModalOn && <Backdrop animation="animated fadeIn faster" onClickFunc="addExercise" />}
             {props.isAddDataModalOn && <AddExerciseModal />}
 
             <UserBar changeAuth={props.changeAuth} />
@@ -46,7 +51,8 @@ function appWindow(props) {
 
 const mapStateToProps = state => {
     return {
-        isAddDataModalOn : state.isAddDataModalOn
+        isAddDataModalOn : state.isAddDataModalOn,
+        toggleResponsiveNavbar : state.isResponsiveNavBarOn
     }
 };
 

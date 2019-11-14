@@ -90,7 +90,6 @@ function SearchBar(props) {
 
         if (filteredExercises.length > 0) {
             pageNum = Math.ceil(filteredExercises.length / resultsPerPage);
-            console.log(pageNum);
         } else {
             pageNum = 1;
         }
@@ -132,7 +131,7 @@ function SearchBar(props) {
     };
 
     return(
-        <div className="searchbar">
+        <div className={`searchbar ${props.animation}`}>
 
             <h2 className="searchbar__title">Search for an exercise</h2>
 
